@@ -1,18 +1,29 @@
 public class Birb {
+    private String species;
     private String politicalAffiliation;
     private String religiousAffiliation;
     private String color;
-    private String age;
-    private String species;
+    private int age;
     private int flightSpeed;
     private int groundSpeed;
     private boolean whenActive;
 
+    public Birb(){
+        this.species = "null";
+        this.politicalAffiliation = "null";
+        this.religiousAffiliation = "null";
+        this.color = "null";
+        this.age = 0;
+        this.flightSpeed = 0;
+        this.groundSpeed = 0;
+        this.whenActive = true;
+    }
+
     public void printInfo(){
-        System.out.printf("Political Affiliation: %s%nReligious Affiliation: %s%n" +
+        System.out.printf("Species: %s%nPolitical Affiliation: %s%nReligious Affiliation: %s%n" +
                 "Color: %s%nAge: %s%nHighest Observed Flight Speed: %s%n" +
                 "Highest Observed Ground Speed: %s%nTime of Day When Active: %s%n",
-                politicalAffiliation, religiousAffiliation, color, flightSpeed, groundSpeed, whenBirdActive());
+                species, politicalAffiliation, religiousAffiliation, color, age, flightSpeed, groundSpeed, whenBirdActive());
     }
 
     public void calculateFlightSpeed(int distance, int time){
@@ -21,7 +32,7 @@ public class Birb {
 
     public String whenBirdActive(){
         String string;
-        if(whenActive = true){string = "Day";}
+        if(whenActive){string = "Day";}
 
         else {string = "Night";}
 
