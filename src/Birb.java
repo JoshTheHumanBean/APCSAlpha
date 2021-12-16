@@ -19,6 +19,17 @@ public class Birb {
         this.whenActive = true;
     }
 
+    public Birb (String s, String p, String r, String c, int a, int f, int g, boolean w){
+        this.species = s;
+        this.politicalAffiliation = p;
+        this.religiousAffiliation = r;
+        this.color = c;
+        this.age = a;
+        this.flightSpeed = f;
+        this.groundSpeed = g;
+        this.whenActive = w;
+    }
+
     public void printInfo(){
         System.out.printf("Species: %s%nPolitical Affiliation: %s%nReligious Affiliation: %s%n" +
                 "Color: %s%nAge: %s%nHighest Observed Flight Speed: %s%n" +
